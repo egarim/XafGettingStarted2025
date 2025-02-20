@@ -7,7 +7,7 @@ using XafGettingStarted2025.Module.Services;
 
 namespace XafGettingStarted2025.Win.Services
 {
-    public class PlatformInfoWin: PlatformInfo
+    public class PlatformInfoWin: PlatformInfo, IPlatformInfo
     {
         
         public PlatformInfoWin()

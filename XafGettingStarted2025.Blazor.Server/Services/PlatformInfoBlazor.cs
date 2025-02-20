@@ -2,7 +2,7 @@
 
 namespace XafGettingStarted2025.Blazor.Server.Services
 {
-    public class PlatformInfoBlazor : PlatformInfo
+    public class PlatformInfoBlazor : PlatformInfo, IPlatformInfo
     {
 
         public PlatformInfoBlazor()

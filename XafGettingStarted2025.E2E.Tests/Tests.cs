@@ -24,7 +24,7 @@ public class XafGettingStarted2025Tests : IDisposable {
     public XafGettingStarted2025Tests() {
         FixtureContext.RegisterApplications(
             new BlazorApplicationOptions(BlazorAppName, string.Format(@"{0}\..\..\..\..\XafGettingStarted2025.Blazor.Server", Environment.CurrentDirectory)),
-            new WinApplicationOptions(WinAppName, string.Format(@"{0}\..\..\..\..\XafGettingStarted2025.Win\bin\EasyTest\net8.0-windows\XafGettingStarted2025.Win.exe", Environment.CurrentDirectory))
+            new WinApplicationOptions(WinAppName, "C:\\Users\\joche\\source\\repos\\XafGettingStarted2025\\XafGettingStarted2025.Win\\bin\\x64\\EasyTest\\net8.0-windows\\XafGettingStarted2025.Win.exe")
         );
         FixtureContext.RegisterDatabases(new DatabaseOptions(AppDBName, "XafGettingStarted2025EasyTest", server: @"(localdb)\mssqllocaldb"));
     }
