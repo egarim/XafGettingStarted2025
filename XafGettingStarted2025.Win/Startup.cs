@@ -1,5 +1,6 @@
 ﻿using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.ApplicationBuilder;
+using DevExpress.ExpressApp.CloneObject;
 using DevExpress.ExpressApp.Design;
 using DevExpress.ExpressApp.Security;
 using DevExpress.ExpressApp.Win;
@@ -23,6 +24,8 @@ public class ApplicationBuilder : IDesignTimeApplicationFactory {
         // Register 3rd-party IoC containers (like Autofac, Dryloc, etc.)
         // builder.UseServiceProviderFactory(new DryIocServiceProviderFactory());
         // builder.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+
+      
 
         builder.UseApplication<XafGettingStarted2025WindowsFormsApplication>();
         builder.Modules

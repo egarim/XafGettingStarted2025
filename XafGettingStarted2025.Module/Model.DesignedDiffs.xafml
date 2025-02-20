@@ -1,12 +1,33 @@
-﻿<?xml version="1.0" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="XafGettingStarted2025">
   <BOModel>
     <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
   </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="@021263b2-9acd-4983-a7ef-bcd73dde22f1" Caption="Custom Views" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="@67f2d8a4-21ed-423c-9db3-57e86013b1d7" ViewId="CustomView" Caption="My Custom VIew" ImageName="BO_Position_v92" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Default" Caption="Demo" />
+    </Items>
+  </NavigationItems>
   <Options>
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="24.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="24.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="24.2.3.0" IsNewNode="True" />
+  </SchemaModules>
   <Views>
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <ListView Id="CustomView" ClassName="XafGettingStarted2025.Module.BusinessObjects.Customer" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="Name" PropertyName="Name" Index="0" SortIndex="0" SortOrder="Ascending" IsNewNode="True" />
+        <ColumnInfo Id="LegalEntityName" PropertyName="LegalEntityName" Index="1" IsNewNode="True" />
+      </Columns>
+    </ListView>
   </Views>
 </Application>
