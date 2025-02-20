@@ -19,7 +19,9 @@ This repository demonstrates:
 
 ## Starting with XAF
 
-### Creating your first project Understanding the project layout
+### Creating your first project 
+
+### Understanding the project layout
 
 ### Creating Controllers
 
