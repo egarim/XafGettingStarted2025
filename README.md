@@ -267,3 +267,27 @@ public DateTime CreatedOn
 }
 ```
 
+# Essential XAF Learning Resources
+
+## Interesting Videos
+
+These curated videos offer comprehensive introductions and practical insights into DevExpress XAF development. Whether you're just starting or looking to deepen your understanding, these resources provide valuable guidance.
+
+### Gentle Introduction to DevExpress XAF by Seth Juarez
+A beginner-friendly overview of XAF's capabilities for cross-platform .NET application development.
+[Watch Video](https://www.youtube.com/watch?v=XOF3h6CojU0)
+
+### Building a CRM application using DevExpress XAF
+Join Dave and Adam as they demonstrate building a complete CRM system using XAF's powerful features.
+[Watch Video](https://www.youtube.com/watch?v=SCPho8CgalY)
+
+### XAF 101: How to ease the learning curve
+Essential tips and strategies for mastering XAF development more efficiently.
+[Watch Video](https://www.youtube.com/watch?v=tF5XKyzR6HA)
+
+### Introduction to XAF by Don Wibier
+A comprehensive overview of XAF featured on Carl Franklin's Blazor Train (Episode 88).
+[Watch Video](https://www.youtube.com/watch?v=vKivMXbsukc)
+
+---
+Note: These videos provide foundational knowledge for working with DevExpress XAF and are recommended for developers at all skill levels.
