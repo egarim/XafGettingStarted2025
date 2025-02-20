@@ -23,7 +23,13 @@ This repository demonstrates:
 
 ### Creating Controllers
 
-### ViewControllers vs WindowControllers Interacting with Views, Frames, and ObjectSpaces
+### ViewControllers vs WindowControllers 
+
+### Interacting with Views, Frames, and ObjectSpaces
+
+### Creating Actions
+
+### Model and Modules
 
 ## New Features in Version 22.1
 
