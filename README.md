@@ -17,7 +17,16 @@ This repository demonstrates:
 - Developers looking to understand some of best practices
 - Anyone interested in enterprise application development with XAF
 
+## Starting with XAF
+
+### Creating your first project Understanding the project layout
+
+### Creating Controllers
+
+### ViewControllers vs WindowControllers Interacting with Views, Frames, and ObjectSpaces
+
 ## New Features in Version 22.1
+
 [Reference Documentation](https://www.devexpress.com/subscriptions/new-2022-1.xml#xaf)
 
 ### Unified Application Configuration for WinForms & Blazor (.NET 6)
