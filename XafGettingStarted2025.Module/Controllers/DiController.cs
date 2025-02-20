@@ -12,6 +12,7 @@ namespace XafGettingStarted2025.Module.Controllers
 {
     public class DiController : ViewController
     {
+        SimpleAction ShowPlatformInfoFromApplication;
         SimpleAction ShowPlatformInfo;
 
         private readonly IServiceProvider serviceProvider;
@@ -21,18 +22,35 @@ namespace XafGettingStarted2025.Module.Controllers
             ShowPlatformInfo = new SimpleAction(this, "Show Platform Info", "View");
             ShowPlatformInfo.Execute += ShowPlatformInfo_Execute;
 
+            ShowPlatformInfoFromApplication = new SimpleAction(this, "ShowPlatformInfoFromApplication", "View");
+            ShowPlatformInfoFromApplication.Execute += ShowPlatformInfoFromApplication_Execute;
+            
 
             //HACK Dependency Injection Documentation: https://docs.devexpress.com/eXpressAppFramework/404364/app-shell-and-base-infrastructure/dependency-injection-in-xaf-applications
             //HACK Dependency Injection Tickets: https://supportcenter.devexpress.com/Ticket/Details/T815184/use-dependency-injection-in-xaf-controllers#:~:text=XAF%20does%20not%20provide%20any%20built-in%20dependency%20injection,that%20configures%20controllers%20created%20by%20the%20base%20class.
-
             //HACK before it was part of the framework Manuel Grundner created a ticket to add it to the framework https://blog.delegate.at/2013/02/21/how-to-use-dependency-injection-in-xaf.html
+
+        }
+        private void ShowPlatformInfoFromApplication_Execute(object sender, SimpleActionExecuteEventArgs e)
+        {
+
+            IPlatformInfo platformInfo = this.Application.ServiceProvider.GetService<IPlatformInfo>();
+
+            MessageOptions options = new MessageOptions();
+            options.Duration = 3000;
+            options.Message = platformInfo.GetPlatformName();
+            options.Type = InformationType.Success;
+            options.Web.Position = InformationPosition.Top;
+            options.Win.Caption = "Platform Info";
+            options.Win.Type = WinMessageType.Flyout;
+            Application.ShowViewStrategy.ShowMessage(options);
 
         }
         // Implement this constructor to support dependency injection.
         [ActivatorUtilitiesConstructor]
         public DiController(IServiceProvider serviceProvider) : this()
         {
-            this.serviceProvider = serviceProvider;
+              this.serviceProvider = serviceProvider;
         }
         private void ShowPlatformInfo_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
