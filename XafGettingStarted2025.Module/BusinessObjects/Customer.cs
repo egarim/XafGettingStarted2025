@@ -38,6 +38,7 @@ namespace XafGettingStarted2025.Module.BusinessObjects
 
 
 
+        CustomerCategory category;
         bool inactive;
         string legalEntityName;
         string name;
@@ -68,12 +69,18 @@ namespace XafGettingStarted2025.Module.BusinessObjects
 
 
 
-    
-   
-
 
         
-   
+        [Association("CustomerCategory-Customers")]
+        public CustomerCategory Category
+        {
+            get => category;
+            set => SetPropertyValue(nameof(Category), ref category, value);
+        }
+
+
+
+
 
 
         //private string _PersistentProperty;

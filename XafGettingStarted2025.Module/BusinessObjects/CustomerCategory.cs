@@ -34,6 +34,15 @@ namespace XafGettingStarted2025.Module.BusinessObjects
             set => SetPropertyValue(nameof(Description), ref description, value);
         }
 
+        [Association("CustomerCategory-Customers")]
+        public XPCollection<Customer> Customers
+        {
+            get
+            {
+                return GetCollection<Customer>(nameof(Customers));
+            }
+        }
+
     }
 
 }
